@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing code for sidebar and video controls
-    // ...
+    // Sidebar Toggle Function
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const closeBtn = document.querySelector('.close-btn');
+
+    function toggleMenu() {
+        sidebar.classList.toggle('active');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+
+    // Removed code related to header video
 
     // Chart.js Implementation
     const ctx = document.getElementById('creatorsChart').getContext('2d');
@@ -50,5 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
+    });
+
+    // Prevent Right-Click on Images Only
+    const images = document.querySelectorAll('img');
+
+    images.forEach((img) => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
     });
 });
