@@ -35,6 +35,9 @@ header video {
     color: #ffffff;
     margin-right: 10px;
 }
+.menu-toggle:hover {
+    color: #58a6ff;
+}
 /* "Lowclass" Text in Header */
 .brand {
     font-family: 'Playfair Display', serif;
@@ -53,13 +56,12 @@ header video {
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     padding-top: 20px; /* Adjusted padding */
     box-sizing: border-box;
-    transition: transform 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
     overflow-y: auto;
     z-index: 3;
-    transform: translateX(0);
 }
 #sidebar.active {
-    transform: translateX(260px);
+    left: 0;
 }
 /* Close Button inside Sidebar */
 .close-btn {
@@ -69,6 +71,9 @@ header video {
     font-size: 24px;
     cursor: pointer;
     color: #c9d1d9;
+}
+.close-btn:hover {
+    color: #58a6ff;
 }
 /* Sidebar Header */
 .sidebar-header {
@@ -196,9 +201,6 @@ footer {
     #sidebar {
         width: 220px;
     }
-    #sidebar.active {
-        transform: translateX(220px);
-    }
     main.shifted {
         margin-left: 220px;
     }
@@ -206,9 +208,6 @@ footer {
 @media screen and (max-width: 480px) {
     #sidebar {
         width: 200px;
-    }
-    #sidebar.active {
-        transform: translateX(200px);
     }
     main.shifted {
         margin-left: 200px;
