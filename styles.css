@@ -132,7 +132,7 @@ img, video {
     width: 240px;
     height: 100%;
     background: linear-gradient(180deg, #161b22, #0d1117);
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     padding-top: 60px; /* Adjusted padding to account for close button */
     box-sizing: border-box;
     transition: left 0.3s ease-in-out;
@@ -157,9 +157,20 @@ img, video {
 /* Sidebar Header */
 .sidebar-header {
     text-align: center;
-    padding: 20px;
+    padding: 15px; /* Adjusted padding */
     border-bottom: 1px solid #c9d1d9;
 }
+
+.sidebar-header img {
+    width: 60px; /* Adjusted width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .sidebar-header h3 {
     font-family: 'Playfair Display', serif;
     color: #ffffff;
@@ -330,6 +341,12 @@ footer p {
         font-size: 22px;
     }
     /* Adjust Sidebar Header */
+    .sidebar-header {
+        padding: 10px;
+    }
+    .sidebar-header img {
+        width: 50px; /* Adjusted for mobile devices */
+    }
     .sidebar-header h3 {
         font-size: 18px;
     }
