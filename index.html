@@ -49,9 +49,10 @@
         <div class="close-btn" aria-label="Close Sidebar">
             <i class="fas fa-times"></i>
         </div>
-        <!-- Sidebar Header -->
-        <div class="sidebar-header">
+        <!-- Sidebar Header with Protected Image -->
+        <div class="sidebar-header image-container">
             <img src="logo.png" alt="Logo or User Image">
+            <img src="transparent.png" alt="" class="overlay">
             <h3>Welcome, User!</h3>
         </div>
         <!-- Navigation Menu -->
@@ -79,18 +80,17 @@
 
     <!-- Main Content -->
     <main id="main-content">
+        <!-- Example Content Section with Protected Image -->
         <section id="description" class="fade-in">
             <h2>Description</h2>
+            <div class="image-container">
+                <img src="path/to/your/watermarked_photo.jpg" alt="Description Image">
+                <img src="transparent.png" alt="" class="overlay">
+            </div>
             <p>Welcome to Lowclass, our exclusive social platform where you can connect with people and follow your favorite creators.</p>
         </section>
-        <section id="about" class="fade-in">
-            <h2>About Us</h2>
-            <p>At Lowclass, we are dedicated to providing a luxurious platform for users to interact, share, and inspire each other.</p>
-        </section>
-        <section id="contact" class="fade-in">
-            <h2>Contact</h2>
-            <p>If you have any questions or feedback, feel free to reach out to us at <a href="mailto:contact@lowclass.com">contact@lowclass.com</a>.</p>
-        </section>
+        <!-- Other content sections -->
+        <!-- ... -->
     </main>
 
     <!-- Footer -->
@@ -114,5 +114,11 @@
 
     <!-- Link to External JavaScript -->
     <script src="script.js"></script>
+    <!-- Disable Right-Click -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        }, false);
+    </script>
 </body>
 </html>
