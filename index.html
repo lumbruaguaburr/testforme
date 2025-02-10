@@ -17,21 +17,25 @@
     <header>
         <!-- Header Content -->
         <div class="header-content">
-            <!-- Menu Toggle Button -->
-            <div class="menu-toggle" aria-label="Open Sidebar">
-                <i class="fas fa-bars"></i>
-            </div>
+            <!-- Play/Pause Button -->
+            <button class="play-pause-btn" aria-label="Pause Video">
+                <i class="fas fa-pause"></i>
+            </button>
             <!-- "Lowclass" Text -->
             <div class="brand">Lowclass</div>
         </div>
-        <!-- Video Background with Gradient Overlay -->
+        <!-- Video Container -->
         <div class="video-container">
-            <video autoplay muted loop playsinline preload="auto" poster="path/to/poster.jpg">
+            <!-- Video Background -->
+            <video id="header-video" autoplay muted loop playsinline preload="auto" poster="poster.jpg">
                 <source src="ex.mp4" type="video/mp4">
                 <!-- Add additional sources if needed -->
                 Your browser does not support the video tag.
             </video>
-            <div class="gradient-overlay"></div>
+            <!-- Placeholder Image -->
+            <img id="video-placeholder" src="path/to/your/image.jpg" alt="Placeholder Image" style="display: none;">
+            <!-- Fade Overlay -->
+            <div class="fade-overlay"></div>
         </div>
     </header>
 
