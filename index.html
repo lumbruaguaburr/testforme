@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Viewport Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Disable Right-Click on Images Only -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach((img) => {
+                img.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Header with Video -->
@@ -85,7 +96,7 @@
             <h2>Description</h2>
             <div class="image-container">
                 <img src="path/to/your/watermarked_photo.jpg" alt="Description Image">
-                <img src="transparent.png" alt="" class="overlay">
+                <img src="path/to/transparent.png" alt="" class="overlay">
             </div>
             <p>Welcome to Lowclass, our exclusive social platform where you can connect with people and follow your favorite creators.</p>
         </section>
@@ -114,11 +125,5 @@
 
     <!-- Link to External JavaScript -->
     <script src="script.js"></script>
-    <!-- Disable Right-Click -->
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        }, false);
-    </script>
 </body>
 </html>
