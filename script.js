@@ -33,4 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     playPauseBtn.addEventListener('click', toggleVideo);
+
+    // Prevent Right-Click on Images Only
+    const images = document.querySelectorAll('img');
+
+    images.forEach((img) => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    });
 });
