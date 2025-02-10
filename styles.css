@@ -125,17 +125,246 @@ img, video {
 }
 
 /* Sidebar Navigation */
-/* (Existing sidebar styles remain unchanged) */
-/* ... */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;  /* Hidden by default */
+    width: 240px;
+    height: 100%;
+    background: linear-gradient(180deg, #161b22, #0d1117);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    padding-top: 60px; /* Adjusted padding to account for close button */
+    box-sizing: border-box;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 3;
+}
+#sidebar.active {
+    left: 0;
+}
+/* Close Button inside Sidebar */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #c9d1d9;
+}
+.close-btn:hover {
+    color: #58a6ff;
+}
+/* Sidebar Header */
+.sidebar-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #c9d1d9;
+}
+.sidebar-header h3 {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    margin: 0;
+    font-size: 20px;
+}
+/* Navigation Menu */
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+#sidebar ul li {
+    margin: 5px 0;
+}
+#sidebar ul li a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, color 0.3s;
+}
+#sidebar ul li a:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+}
+#sidebar ul li a .fas {
+    margin-right: 10px;
+    font-size: 18px;
+}
+/* Dividers */
+.sidebar-divider {
+    height: 1px;
+    background-color: #c9d1d9;
+    margin: 10px 0;
+}
+/* Social Icons in Sidebar */
+.sidebar-social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.sidebar-social-icons a {
+    color: #c9d1d9;
+    font-size: 24px;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+.sidebar-social-icons a:hover {
+    color: #58a6ff;
+}
 
 /* Main Content */
-/* (Existing main content styles remain unchanged) */
-/* ... */
+main {
+    padding: 20px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    transition: margin-left 0.3s ease-in-out;
+}
+main.shifted {
+    margin-left: 260px;
+}
+/* Content Sections */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Fade-in Animation for Text */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Animation Delay for Sequential Effect */
+#description.fade-in {
+    animation-delay: 0.2s;
+}
+#about.fade-in {
+    animation-delay: 0.4s;
+}
+#contact.fade-in {
+    animation-delay: 0.6s;
+}
 
 /* Footer */
-/* (Existing footer styles remain unchanged) */
-/* ... */
+footer {
+    background-color: #161b22;
+    color: #c9d1d9;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+}
+footer p {
+    margin: 5px 0;
+}
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.social-icons a {
+    color: #c9d1d9;
+    font-size: 28px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #58a6ff;
+}
 
 /* Responsive Design */
-/* (Existing media queries remain unchanged) */
-/* ... */
+@media screen and (max-width: 768px) {
+    /* Adjust Header Content */
+    .header-content {
+        padding: 5px;
+        background-color: rgba(13, 17, 23, 0.7);
+    }
+    .brand {
+        font-size: 24px;
+    }
+    /* Adjust Sidebar */
+    #sidebar {
+        width: 220px;
+    }
+    main.shifted {
+        margin-left: 0; /* Keep content centered */
+    }
+    /* Adjust Main Content */
+    main {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 480px) {
+    /* Adjust Header Content */
+    .brand {
+        font-size: 20px;
+    }
+    /* Adjust Sidebar */
+    #sidebar {
+        width: 200px;
+    }
+    /* Adjust Menu Toggle and Close Button */
+    .menu-toggle, .close-btn {
+        font-size: 22px;
+    }
+    /* Adjust Sidebar Header */
+    .sidebar-header h3 {
+        font-size: 18px;
+    }
+    /* Adjust Navigation Menu */
+    #sidebar ul li a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    #sidebar ul li a .fas {
+        font-size: 16px;
+    }
+    /* Adjust Main Content */
+    main {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    /* Adjust Footer */
+    footer {
+        padding: 15px;
+    }
+    .social-icons a {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+}
+/* Accessibility for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
