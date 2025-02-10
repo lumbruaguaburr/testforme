@@ -24,11 +24,15 @@
             <!-- "Lowclass" Text -->
             <div class="brand">Lowclass</div>
         </div>
-        <!-- Video Background -->
-        <video autoplay muted loop playsinline>
-            <source src="ex.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <!-- Video Background with Gradient Overlay -->
+        <div class="video-container">
+            <video autoplay muted loop playsinline preload="auto" poster="path/to/poster.jpg">
+                <source src="ex.mp4" type="video/mp4">
+                <!-- Add additional sources if needed -->
+                Your browser does not support the video tag.
+            </video>
+            <div class="gradient-overlay"></div>
+        </div>
     </header>
 
     <!-- Sidebar Navigation -->
@@ -44,7 +48,7 @@
         </div>
         <!-- Navigation Menu -->
         <ul>
-            <li><a href="#social"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#description"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#following"><i class="fas fa-user-friends"></i> Following Creators</a></li>
             <li><a href="#top"><i class="fas fa-star"></i> Top Creators</a></li>
             <li><a href="#help"><i class="fas fa-question-circle"></i> Help Center</a></li>
