@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lowclass - My Social Platform</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-n7M2npnMK3uv1+IMF1K6OxO8P169s776VUEjyknW1Q7j2E3dha6DfxqFTMkzDv1uvR7rQDunr6s5QAG+/nWIIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Header and Video */
+        header {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        header video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Header Content */
+        .header-content {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+        /* Menu Toggle Button */
+        .menu-toggle {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ffffff;
+            margin-right: 10px;
+        }
+        /* "Lowclass" Text in Header */
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        /* Sidebar Navigation */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -260px;  /* Hidden by default */
+            width: 240px;
+            height: 100%;
+            background: linear-gradient(180deg, #161b22, #0d1117);
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+            padding-top: 20px; /* Adjusted padding */
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out;
+            overflow-y: auto;
+            z-index: 3;
+            transform: translateX(0);
+        }
+        #sidebar.active {
+            transform: translateX(260px);
+        }
+        /* Close Button inside Sidebar */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #c9d1d9;
+        }
+        /* Sidebar Header */
+        .sidebar-header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #c9d1d9;
+        }
+        .sidebar-header img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .sidebar-header h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            margin: 0;
+        }
+        /* Navigation Menu */
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        #sidebar ul li {
+            margin: 10px 0;
+        }
+        #sidebar ul li a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s, color 0.3s;
+        }
+        #sidebar ul li a:hover {
+            background-color: #58a6ff;
+            color: #0d1117;
+        }
+        #sidebar ul li a .fas {
+            margin-right: 15px;
+        }
+        /* Dividers */
+        .sidebar-divider {
+            height: 1px;
+            background-color: #c9d1d9;
+            margin: 20px 0;
+        }
+        /* Social Icons in Sidebar */
+        .sidebar-social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .sidebar-social-icons a {
+            color: #c9d1d9;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .sidebar-social-icons a:hover {
+            color: #58a6ff;
+        }
+
+        /* Main Content Adjustments */
+        main {
+            padding: 20px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        /* Shift content when sidebar is active */
+        main.shifted {
+            margin-left: 260px;
+        }
+
+        /* Fade-in Animation for Text */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Animation Delay for Sequential Effect */
+        #description.fade-in {
+            animation-delay: 0.2s;
+        }
+        #about.fade-in {
+            animation-delay: 0.4s;
+        }
+        #contact.fade-in {
+            animation-delay: 0.6s;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #161b22;
+            color: #c9d1d9;
+            text-align: center;
+            padding: 20px;
+            clear: both;
+        }
+        /* Social Icons Styles */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: #c9d1d9;
+            font-size: 32px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #58a6ff;
+        }
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                width: 220px;
+            }
+            #sidebar.active {
+                transform: translateX(220px);
+            }
+            main.shifted {
+                margin-left: 220px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            #sidebar {
+                width: 200px;
+            }
+            #sidebar.active {
+                transform: translateX(200px);
+            }
+            main.shifted {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Video -->
+    <header>
+        <!-- Header Content -->
+        <div class="header-content">
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" onclick="toggleMenu()" aria-label="Open Sidebar"><i class="fas fa-bars"></i></div>
+            <!-- "Lowclass" Text -->
+            <div class="brand">Lowclass</div>
+        </div>
+        <!-- Video Background -->
+        <video autoplay muted loop>
+            <source src="ex.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar">
+        <!-- Close Button -->
+        <div class="close-btn" onclick="toggleMenu()" aria-label="Close Sidebar"><i class="fas fa-times"></i></div>
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <img src="path/to/your/logo.png" alt="Logo or User Image">
+            <h3>Welcome, User!</h3>
+        </div>
+        <!-- Navigation Menu -->
+        <ul>
+            <li><a href="#social"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#following"><i class="fas fa-user-friends"></i> Following Creators</a></li>
+            <li><a href="#top"><i class="fas fa-star"></i> Top Creators</a></li>
+            <li><a href="#help"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        </ul>
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+        <!-- Social Icons -->
+        <div class="sidebar-social-icons">
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section id="description" class="fade-in">
+            <h2>Description</h2>
+            <p>Welcome to Lowclass, our exclusive social platform where you can connect with people and follow your favorite creators.</p>
+        </section>
+        <section id="about" class="fade-in">
+            <h2>About Us</h2>
+            <p>At Lowclass, we are dedicated to providing a luxurious platform for users to interact, share, and inspire each other.</p>
+        </section>
+        <section id="contact" class="fade-in">
+            <h2>Contact</h2>
+            <p>If you have any questions or feedback, feel free to reach out to us at <a href="mailto:contact@lowclass.com">contact@lowclass.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lowclass</p>
+        <p>Contact us at: 087</p>
+        <p>Follow us on:</p>
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script for Sidebar Toggle -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('main-content');
+            sidebar.classList.toggle('active');
+            mainContent.classList.toggle('shifted');
+        }
+    </script>
+</body>
+</html>
