@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lowclass - Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="../087/css/styles.css">
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="../087/asset/logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header with Video -->
+    <header>
+        <!-- Header Content -->
+        <div class="header-content">
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" aria-label="Open Sidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- "Lowclass" Text -->
+            <div class="brand">Lowclass</div>
+        </div>
+        <!-- Video Container -->
+        <div class="video-container">
+            <!-- Video Background -->
+            <video id="header-video" autoplay muted loop playsinline preload="auto" poster="../087/asset/image/place.jpg">
+                <source src="../087/asset/video/ex.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Placeholder Image -->
+            <img id="video-placeholder" src="../087/asset/image/place.jpg" alt="Placeholder Image" style="display: none;">
+            <!-- Fade Overlay -->
+            <div class="fade-overlay"></div>
+            <!-- Video Overlay Text -->
+            <div class="video-overlay">
+                <h1>Welcome to Lowclass</h1>
+                <p>Connect with creators like never before.</p>
+                <a href="#features" class="btn">Learn More</a>
+            </div>
+            <!-- Play/Pause Button -->
+            <button class="play-pause-btn" aria-label="Pause Video" aria-pressed="false">
+                <i class="fas fa-pause"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Sidebar Navigation">
+        <!-- Close Button -->
+        <div class="close-btn" aria-label="Close Sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+        <!-- Sidebar Header with Protected Image -->
+        <div class="sidebar-header image-container">
+            <img src="../087/asset/logo/logo.png" alt="Logo or User Image">
+            <img src="../087/asset/transparent.png" alt="" class="overlay">
+            <h3>Welcome, User!</h3>
+        </div>
+        <!-- Navigation Menu -->
+        <ul>
+            <li class="active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="fol.html"><i class="fas fa-user-friends"></i> Following Creators</a></li>
+            <li><a href="top.html"><i class="fas fa-star"></i> Top Creators</a></li>
+            <li><a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        </ul>
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+        <!-- Social Icons -->
+        <div class="sidebar-social-icons">
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Features Section -->
+        <section id="features" class="fade-in">
+            <h2>Features</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Connect</h3>
+                    <p>Build meaningful connections with like-minded individuals.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-video"></i>
+                    <h3>Discover</h3>
+                    <p>Explore content from top creators around the world.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Engage</h3>
+                    <p>Participate in exclusive events and live sessions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="fade-in">
+            <h2>About Us</h2>
+            <p>At Lowclass, we believe in fostering genuine connections between creators and their audience. Our platform provides a space where creativity thrives and communities grow.</p>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="fade-in">
+            <h2>What Our Users Say</h2>
+            <div class="slider">
+                <div class="slide">
+                    <p>"Lowclass has revolutionized the way I connect with creators!"</p>
+                    <h3>- Alex J.</h3>
+                </div>
+                <div class="slide">
+                    <p>"A fantastic platform with incredible features."</p>
+                    <h3>- Jamie K.</h3>
+                </div>
+                <div class="slide">
+                    <p>"The user experience is unmatched. Highly recommended!"</p>
+                    <h3>- Riley S.</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="email" class="sr-only">Email Address</label>
+                    <i class="fas fa-envelope"></i>
+                    <input id="email" type="email" name="email" placeholder="Your email address..." required>
+                </div>
+                <div class="input-group">
+                    <label for="message" class="sr-only">Message</label>
+                    <i class="fas fa-comment"></i>
+                    <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lowclass is a platform dedicated to connecting fans with their favorite creators.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fol.html">Creators</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lowclass. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="../087/js/script.js"></script>
+</body>
+</html>

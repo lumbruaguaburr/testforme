@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lowclass - Following Creators</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="../087/css/fol.css">
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="../087/asset/logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header with Video -->
+    <header>
+        <!-- Header Content -->
+        <div class="header-content">
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" aria-label="Open Sidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- "Lowclass" Text -->
+            <div class="brand">Lowclass</div>
+        </div>
+        <!-- Video Container -->
+        <div class="video-container">
+            <!-- Video Background -->
+            <video id="header-video" autoplay muted loop playsinline preload="auto" poster="../087/asset/image/place.jpg">
+                <source src="../087/asset/video/yaimak.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Placeholder Image -->
+            <img id="video-placeholder" src="../087/asset/image/place.jpg" alt="Placeholder Image" style="display: none;">
+            <!-- Fade Overlay -->
+            <div class="fade-overlay"></div>
+            <!-- Video Overlay Text -->
+            <div class="video-overlay">
+                <h1>Following Creators</h1>
+                <p>Manage and interact with the creators you follow.</p>
+            </div>
+            <!-- Play/Pause Button -->
+            <button class="play-pause-btn" aria-label="Pause Video" aria-pressed="false">
+                <i class="fas fa-pause"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Sidebar Navigation">
+        <!-- Close Button -->
+        <div class="close-btn" aria-label="Close Sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+        <!-- Sidebar Header with Protected Image -->
+        <div class="sidebar-header image-container">
+            <img src="../087/asset/logo/logo.png" alt="Logo">
+            <img src="../087/asset/transparent.png" alt="" class="overlay">
+            <h3>Welcome, User!</h3>
+        </div>
+        <!-- Navigation Menu -->
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="active"><a href="fol.html"><i class="fas fa-user-friends"></i> Following Creators</a></li>
+            <li><a href="top.html"><i class="fas fa-star"></i> Top Creators</a></li>
+            <li><a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        </ul>
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+        <!-- Social Icons -->
+        <div class="sidebar-social-icons">
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Following Creators Section -->
+        <section id="following-creators" class="fade-in">
+            <h2>Your Following Creators</h2>
+            <!-- Search Bar -->
+            <input type="text" id="search-bar" placeholder="Search creators..." />
+            <div class="creators-grid">
+                <!-- Creator Card 1 -->
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="../087/asset/logo/mrbeast.png" alt="MrBeast">
+                    </div>
+                    <div class="creator-info">
+                        <h3>MrBeast</h3>
+                        <p>Philanthropist and content creator known for his extravagant stunts.</p>
+                    </div>
+                    <div class="creator-actions">
+                        <button class="btn unfollow-btn" data-creator-id="1">
+                            <i class="fas fa-user-minus"></i> Unfollow
+                        </button>
+                    </div>
+                </div>
+                <!-- Creator Card 2 -->
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="../087/asset/logo/dharmann.png" alt="Dhar Mann">
+                    </div>
+                    <div class="creator-info">
+                        <h3>Dhar Mann</h3>
+                        <p>Motivational speaker and entrepreneur creating uplifting stories.</p>
+                    </div>
+                    <div class="creator-actions">
+                        <button class="btn unfollow-btn" data-creator-id="2">
+                            <i class="fas fa-user-minus"></i> Unfollow
+                        </button>
+                    </div>
+                </div>
+                <!-- Creator Card 3 -->
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="../087/asset/logo/matterife.png" alt="Matt Rife">
+                    </div>
+                    <div class="creator-info">
+                        <h3>Matt Rife</h3>
+                        <p>Comedian and actor known for his witty stand-up performances.</p>
+                    </div>
+                    <div class="creator-actions">
+                        <button class="btn unfollow-btn" data-creator-id="3">
+                            <i class="fas fa-user-minus"></i> Unfollow
+                        </button>
+                    </div>
+                </div>
+                <!-- Creator Card 4 -->
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="../087/asset/logo/rhettandlink.png" alt="Rhett & Link">
+                    </div>
+                    <div class="creator-info">
+                        <h3>Rhett & Link</h3>
+                        <p>Dynamic duo hosting the popular show "Good Mythical Morning".</p>
+                    </div>
+                    <div class="creator-actions">
+                        <button class="btn unfollow-btn" data-creator-id="4">
+                            <i class="fas fa-user-minus"></i> Unfollow
+                        </button>
+                    </div>
+                </div>
+                <!-- Creator Card 5 -->
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="../087/asset/logo/alexcooper.png" alt="Alex Cooper">
+                    </div>
+                    <div class="creator-info">
+                        <h3>Alex Cooper</h3>
+                        <p>Host of the "Call Her Daddy" podcast, discussing relationships and life.</p>
+                    </div>
+                    <div class="creator-actions">
+                        <button class="btn unfollow-btn" data-creator-id="5">
+                            <i class="fas fa-user-minus"></i> Unfollow
+                        </button>
+                    </div>
+                </div>
+                <!-- Add more creator cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lowclass is a platform dedicated to connecting fans with their favorite creators.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fol.html">Creators</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lowclass. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="../087/js/fol.js"></script>
+</body>
+</html>

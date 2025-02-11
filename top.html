@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lowclass - Top Creators</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Chart.js CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="../087/css/top.css">
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="../087/asset/logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header with Gradient Background -->
+    <header class="gradient-header">
+        <!-- Header Content -->
+        <div class="header-content">
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" aria-label="Open Sidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- "Lowclass" Text -->
+            <div class="brand">Lowclass</div>
+        </div>
+        <!-- Header Overlay Text -->
+        <div class="header-overlay">
+            <h1>Top Creators</h1>
+            <p>Discover the most influential creators on Lowclass.</p>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Sidebar Navigation">
+        <!-- Close Button -->
+        <div class="close-btn" aria-label="Close Sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+        <!-- Sidebar Header with Protected Image -->
+        <div class="sidebar-header image-container">
+            <img src="../087/asset/logo/logo.png" alt="Logo">
+            <img src="../087/asset/transparent.png" alt="" class="overlay">
+            <h3>Welcome, User!</h3>
+        </div>
+        <!-- Navigation Menu -->
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="fol.html"><i class="fas fa-user-friends"></i> Following Creators</a></li>
+            <li class="active"><a href="top.html"><i class="fas fa-star"></i> Top Creators</a></li>
+            <li><a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        </ul>
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+        <!-- Social Icons -->
+        <div class="sidebar-social-icons">
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Top Creators Chart Section -->
+        <section id="top-creators" class="fade-in">
+            <h2>Top 5 Creators</h2>
+            <div class="graph-container">
+                <canvas id="creatorsChart"></canvas>
+            </div>
+            <!-- Data Table Below the Chart -->
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Creator</th>
+                            <th>Followers<br>(Millions)</th>
+                            <th>Earnings<br>($ Millions)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>MrBeast</td>
+                            <td>503</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dhar Mann</td>
+                            <td>120</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Matt Rife</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Rhett & Link</td>
+                            <td>107</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Alex Cooper</td>
+                            <td>12</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Top 20 Creators List -->
+        <section id="top-20-creators" class="fade-in">
+            <h2>Top 20 Creators</h2>
+            <ul class="creators-list">
+                <!-- Repeat for each creator -->
+                <li>
+                    <img src="../087/asset/logo/mrbeast.png" alt="MrBeast">
+                    <span>1. MrBeast</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/dharmann.png" alt="Dhar Mann">
+                    <span>2. Dhar Mann</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/matterife.png" alt="Matt Rife">
+                    <span>3. Matt Rife</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/rhettandlink.png" alt="Rhett & Link">
+                    <span>4. Rhett & Link</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/alexcooper.png" alt="Alex Cooper">
+                    <span>5. Alex Cooper</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/markrober.png" alt="Mark Rober">
+                    <span>6. Mark Rober</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/addisonraeeaterling.png" alt="Addison Rae Easterling">
+                    <span>7. Addison Rae Easterling</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/markiplier.png" alt="Markiplier">
+                    <span>8. Markiplier</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/livvydunne.png" alt="Livvy Dunne">
+                    <span>9. Livvy Dunne</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/flaujaejohnson.png" alt="Flau’jae Johnson">
+                    <span>10.Flau’jae Johnson</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/khabylame.png" alt=" Khaby Lame">
+                    <span>11.  Khaby Lame</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/charli.png" alt="Charli D'Amelio">
+                    <span>12. Charli D'Amelio</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/bellapoarch.png" alt="Bella Poarch">
+                    <span>13. Bella Poarch</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/spencerx.png" alt="Spencer X">
+                    <span>14. Spencer X</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/zac.png" alt="Zac King">
+                    <span>15. Zac King</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/dixie.png" alt="Dixie D'Amelio">
+                    <span>16. Dixie D'Amelio</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/brent.png" alt=" Brent Rivera">
+                    <span>17.  Brent Rivera</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/loren.png" alt="Loren Gray">
+                    <span>18. Loren Gray</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/michealle.png" alt="Michael Le">
+                    <span>19. Michael Le</span>
+                </li>
+                <li>
+                    <img src="../087/asset/logo/jasonderulo.jpg" alt="Jason Derulo">
+                    <span>20. Jason Derulo</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lowclass is a platform dedicated to connecting fans with their favorite creators.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fol.html">Creators</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lowclass. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="../087/js/top.js"></script>
+</body>
+</html>

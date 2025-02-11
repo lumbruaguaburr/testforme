@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lowclass - Help Center</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="../087/css/help.css">
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="../087/asset/logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header with Gradient Background -->
+    <header class="gradient-header">
+        <!-- Header Content -->
+        <div class="header-content">
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" aria-label="Open Sidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- "Lowclass" Text -->
+            <div class="brand">Lowclass</div>
+        </div>
+        <!-- Header Overlay Text -->
+        <div class="header-overlay">
+            <h1>Help Center</h1>
+            <p>We're here to assist you. Find answers and get support.</p>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Sidebar Navigation">
+        <!-- Close Button -->
+        <div class="close-btn" aria-label="Close Sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+        <!-- Sidebar Header -->
+        <div class="sidebar-header image-container">
+            <img src="../087/asset/logo/logo.png" alt="Logo">
+            <img src="../087/asset/transparent.png" alt="" class="overlay">
+            <h3>Welcome, User!</h3>
+        </div>
+        <!-- Navigation Menu -->
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="fol.html"><i class="fas fa-user-friends"></i> Following Creators</a></li>
+            <li><a href="top.html"><i class="fas fa-star"></i> Top Creators</a></li>
+            <li class="active"><a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        </ul>
+        <!-- Divider -->
+        <div class="sidebar-divider"></div>
+        <!-- Social Icons -->
+        <div class="sidebar-social-icons">
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Search Bar -->
+        <section id="help-search" class="fade-in">
+            <input type="text" id="search-bar" placeholder="Search for help articles..." />
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faqs" class="fade-in">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do I create an account?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To create an account, click on the 'Sign Up' button at the top right corner and fill in your details.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How can I reset my password?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Click on 'Forgot Password' on the login page and follow the instructions to reset your password.</p>
+                    </div>
+                </div>
+                <!-- Add more FAQ items as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Support Section -->
+        <section id="contact-support" class="fade-in">
+            <h2>Need Further Assistance?</h2>
+            <p>If you can't find the answer you're looking for, feel free to reach out to our support team.</p>
+            <a href="contact.html" class="btn contact-btn"><i class="fas fa-envelope"></i> Contact Support</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lowclass is a platform dedicated to connecting fans with their favorite creators.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fol.html">Creators</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lowclass. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="../087/js/help.js"></script>
+</body>
+</html>
