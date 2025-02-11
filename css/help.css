@@ -1,0 +1,127 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1f2937;
+    --secondary-color: #3b82f6;
+    --accent-color: #fbbf24;
+    --background-color: #111827;
+    --text-color: #f9fafb;
+    --muted-text-color: #9ca3af;
+    --error-color: #ef4444;
+    --success-color: #10b981;
+    --font-family: 'Montserrat', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* กำหนดสไตล์พื้นฐานสำหรับเอกสาร */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    margin: 0;
+    padding: 0;
+}
+
+/* หัวเรื่อง */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* ลิงก์ */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* ปุ่มสไตล์ */
+.button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+}
+
+/* ข้อความแจ้งเตือน */
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: var(--success-color);
+}
+
+.alert-error {
+    background-color: var(--error-color);
+}
+
+/* ข้อความที่ถูกปิดเสียง */
+.muted-text {
+    color: var(--muted-text-color);
+}
+
+/* ฟอร์มอินพุต */
+input, textarea {
+    background-color: #fff;
+    color: var(--text-color);
+    border: 1px solid var(--muted-text-color);
+    padding: 10px;
+    font-family: var(--font-family);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transition: border-color var(--transition-speed);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* การจัดการคอนเทนเนอร์ */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* การจัดการคอลัมน์ด้วย Flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+/* สร้างการ์ดสำหรับเนื้อหา */
+.card {
+    background-color: #fff;
+    border: 1px solid var(--muted-text-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

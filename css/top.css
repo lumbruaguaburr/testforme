@@ -1,0 +1,549 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1f2937;
+    --secondary-color: #3b82f6;
+    --accent-color: #fbbf24;
+    --background-color: #111827;
+    --text-color: #f9fafb;
+    --muted-text-color: #9ca3af;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Gradient Header */
+.gradient-header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-overlay {
+    text-align: center;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+.header-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-overlay p {
+    font-size: 24px;
+}
+
+/* Header Content Position */
+.gradient-header .header-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.gradient-header .header-content .menu-toggle,
+.gradient-header .header-content .brand {
+    color: var(--text-color);
+}
+
+.gradient-header .header-content .menu-toggle:hover {
+    color: var(--background-color);
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: linear-gradient(180deg, #161b22, var(--background-color));
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    padding-top: 60px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 4;
+    transform: translateX(0);
+}
+
+#sidebar.active {
+    transform: translateX(260px);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.close-btn:hover {
+    color: var(--accent-color);
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--muted-text-color);
+}
+
+.sidebar-header img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-color);
+    margin: 0;
+    font-size: 20px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#sidebar ul li {
+    margin: 5px 0;
+}
+
+#sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s;
+}
+
+#sidebar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar ul li a:hover::after {
+    transform: translateX(0);
+}
+
+#sidebar ul li a .fas {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+#sidebar ul li.active a {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.sidebar-divider {
+    height: 1px;
+    background-color: var(--muted-text-color);
+    margin: 10px 0;
+}
+
+.sidebar-social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.sidebar-social-icons a {
+    color: var(--text-color);
+    font-size: 24px;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.sidebar-social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: margin-left 0.3s ease-in-out;
+}
+
+main.shifted {
+    margin-left: 260px;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Graph Section */
+#top-creators {
+    padding: 60px 20px;
+}
+
+.graph-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.data-table {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.data-table thead th {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: var(--primary-color);
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+/* Top 20 Creators List */
+#top-20-creators {
+    padding: 60px 20px;
+}
+
+.creators-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.creators-list li {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.creators-list li:hover {
+    transform: translateY(-10px);
+}
+
+.creators-list img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.creators-list span {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section .social-icons {
+    display: flex;
+}
+
+.footer-section .social-icons a {
+    color: var(--text-color);
+    font-size: 28px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-section .social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* (Same as previous styles) */
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Content Sections */
+section {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Graph Section */
+#top-creators {
+    padding: 60px 20px;
+}
+
+.graph-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.data-table {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: center;
+    color: var(--text-color);
+    border: 1px solid var(--muted-text-color);
+}
+
+.data-table thead th {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: var(--primary-color);
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+/* Top 20 Creators List */
+#top-20-creators {
+    padding: 60px 20px;
+}
+
+.creators-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.creators-list li {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.creators-list li:hover {
+    transform: translateY(-10px);
+}
+
+.creators-list img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.creators-list span {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sidebar, Footer, and Other Styles */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-overlay h1 {
+        font-size: 36px;
+    }
+    .header-overlay p {
+        font-size: 20px;
+    }
+    .creators-list li {
+        width: 120px;
+        padding: 15px;
+    }
+    .creators-list img {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-overlay h1 {
+        font-size: 28px;
+    }
+    .header-overlay p {
+        font-size: 16px;
+    }
+    .creators-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .creators-list li {
+        width: 80%;
+    }
+}
+
+/* Accessibility for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
